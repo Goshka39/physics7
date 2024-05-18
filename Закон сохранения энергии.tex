@@ -1,0 +1,88 @@
+% Преамбула
+% \documentclass{book}
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage[T1]{fontenc}
+% \usepackage[showframe,a6paper,top=2.5cm]{geometry} 
+% \usepackage[a4paper,portrait,left=1.0cm,right=1.0cm,top=0.5cm,bottom=0.5cm]{geometry}
+\usepackage[a5paper,portrait,left=1.0cm,right=1.0cm,top=1.0cm,bottom=1.0cm]{geometry}
+% \usepackage{gooemacs}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{amsmath}
+% \usepackage{fancyhdr}
+
+\usepackage{xcolor,graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{nopageno}
+\newcommand{\pdt}[1]{
+	\par
+	\begin{minipage}{.95\linewidth}
+	\setlength{\parindent}{2em}
+	{#1}
+	\end{minipage}
+	\linebreak
+}
+
+\newcommand{\pdtpr}[4]{
+	\par
+	\begin{minipage}{#3\linewidth}
+	\setlength{\parindent}{2em}
+	{#1}
+	\end{minipage}
+	\begin{minipage}{#4\linewidth}
+	{\includegraphics[width=\linewidth]{#2}}
+	\end{minipage}
+	\linebreak
+}
+\newcommand{\pdtpb}[2]{
+	\par
+	\begin{minipage}{.95\linewidth}
+	\setlength{\parindent}{2em}
+	{#1}
+	\end{minipage}
+	\linebreak
+	\begin{minipage}{.95\linewidth}
+	{\includegraphics[width=\linewidth]{#2}}
+	\end{minipage}
+	\linebreak
+}
+
+
+
+\begin{document}
+\newcounter{cn}
+\stepcounter{cn}
+\pdt{
+\Large\textbf{Задача 1.}
+ {Вася бросает мячики массой 30 г в мишень которую держит Коля на высоте 0,8 м выше Васи.  Считая что стартовая скорость мячика 5 м/с, определите минимальную скорость мячика при попадании в мишень. Какую работу нужно совершить Коле чтобы поймать 3 мячика?}
+ }
+ \linebreak
+\pdtpr{
+\Large\textbf{Задача 2.}
+{Страховка альпиниста закреплена на высоте $h_1=20\text{м}$. Вася массой $m=40\text{кг}$ забрался на высоту 30 м. Какой должна быть жесткость альпинисткой веревки, чтобы при падении Вася не коснулся земли? 
+}}
+{alpin.png}{.6}{.35}
+\linebreak
+\pdtpr{
+\Large\textbf{Задача 3.}
+{Шар закреплен на жестком невесомом стержне длинны $l = 0,45\text{м}$. С какой скоростью $v_0$ должен двигаться шар в нижней точке чтобы он смог сделать полный оборот?
+}}
+{ball.png}{.6}{.35}
+\linebreak
+\pdtpr{
+\Large\textbf{Задача 4.}
+{Вася спрыгнул с балкона слева чтобы Коля смог запрыгнуть на балкон справа. Какова скорость приземления на балкон Коли, если высота балконов 3 метра, Вася весит 35 кг, а Коля 30 кг?
+}}
+{balcon.png}{.6}{.35}
+\linebreak
+\pdtpr{
+\Large\textbf{Задача 5.}
+{
+Папа затащил Васю на горку длинной $l=100\text{м}$ и высотой  $h=50\text{м}$. Какую работу затратил папа на подъем Васи, если сила трения $F_\text{тр}=30\text{Н}$, а масса Васи $m_\text{В}=30\text{кг}$? С какой скоростью будет ехать Вася, когда скатится с горки?
+}}
+{gorka.png}{.6}{.35}
+\end{document}
